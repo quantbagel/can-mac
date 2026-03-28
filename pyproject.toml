@@ -1,0 +1,28 @@
+[project]
+name = "yamtest"
+version = "0.0.1"
+description = "YAM teleop viewer"
+requires-python = ">=3.10"
+dependencies = [
+    "mjviser",
+    "mujoco>=3.6.0",
+    "numpy>=2.0",
+    "viser>=0.2.0",
+    "i2rt",
+]
+
+[tool.uv]
+override-dependencies = ["mujoco>=3.6.0"]
+
+[tool.uv.sources]
+i2rt = { path = "i2rt" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["_yamtest"]

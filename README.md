@@ -7,18 +7,21 @@ Mirror the real arm in sim, or control the real arm from sim sliders.
 ## Setup
 
 ```bash
-# CAN bridge (requires a CANable 2.0 adapter)
+git clone --recursive https://github.com/quantbagel/can-mac.git
+cd can-mac
+uv sync
+```
+
+### CAN bridge (requires a CANable 2.0 adapter)
+
+```bash
 cd can-bridge && cargo build --release
 ./target/release/can-bridge  # listens on /tmp/can0.sock
-
-# Python deps
-uv pip install mujoco numpy viser mjviser
-uv pip install -e i2rt
 ```
 
 ## Run
 
 ```bash
-python teleop_viewer.py
+uv run teleop_viewer.py
 # Open http://localhost:8080
 ```
