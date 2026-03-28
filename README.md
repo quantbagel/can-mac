@@ -1,5 +1,7 @@
 # YAM Teleop Viewer
 
+![Viewer](viewer.png)
+
 Bidirectional teleop bridge for the [YAM](https://github.com/i2rt/i2rt) arm with a browser-based MuJoCo viewer (via [viser](https://github.com/nerfstudio-project/viser) + [mjviser](https://pypi.org/project/mjviser/)).
 
 Mirror the real arm in sim, or control the real arm from sim sliders.
