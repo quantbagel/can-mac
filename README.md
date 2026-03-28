@@ -4,6 +4,12 @@ Bidirectional teleop bridge for the [YAM](https://github.com/i2rt/i2rt) arm with
 
 Mirror the real arm in sim, or control the real arm from sim sliders.
 
+## Prerequisites
+
+- [uv](https://docs.astral.sh/uv/)
+- [Rust](https://rustup.rs/) (for the CAN bridge)
+- CANable 2.0 USB adapter
+
 ## Setup
 
 ```bash
